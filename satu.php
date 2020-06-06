@@ -1,25 +1,32 @@
+<form method="get">
+	Nilai <input type="text" name="inputan">
+	<button type="submit" > Cek Nilai </button>
+</form>
+
 <?php 
-$nilai = 59;
-if($nilai >= 90) {echo 'A';}
-elseif(($nilai >= 80) AND ($nilai < 89))
-{
-	echo 'B';
+$nilai = $_GET['inputan'];
+if($nilai >= 90) {
+	$category =  'A';
 }
-elseif(($nilai >= 70) AND ($nilai < 79))
+elseif(($nilai >= 80) AND ($nilai <= 89))
 {
-	echo 'C';
+	$category = 'B';
 }
-elseif(($nilai >= 60) AND ($nilai < 69))
+elseif(($nilai >= 70) AND ($nilai <= 79))
 {
-	echo 'D';
+	$category = 'C';
+}
+elseif(($nilai >= 60) AND ($nilai <= 69))
+{
+	$category = 'D';
 }
 elseif(($nilai <= 59 ))
 {
-	echo 'E';
+	$category =  'E';
 }
 else
 {
 	$nilai = "Nilai diluar kategori";
 }
-echo "Nilai Anda masuk dalam kategori ".$nilai;
+echo $category . " Nilai Anda masuk dalam kategori ".$nilai;
 ?>
