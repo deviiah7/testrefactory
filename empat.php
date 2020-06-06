@@ -1,3 +1,7 @@
+<form method="get">
+	Nilai <input type="text" name="input">
+	<button type="submit" > Cek Nilai </button>
+</form>
 <?php
 $input =isset($_GET['input']) ? $_GET['input'] : "";
 if($input){

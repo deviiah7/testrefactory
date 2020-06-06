@@ -14,7 +14,7 @@ $person = '
 // melakukan perulangan dan decode json
 foreach(json_decode($person) as $row) {
     //melakukan filter data age < 21
-    if($row->age < 21) {
+    if($row->age <= 21) {
         echo "id ".$row->id.'<br>';
         echo "name ".$row->name.'<br>';
         echo "age ".$row->age.'<br>';

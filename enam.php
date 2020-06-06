@@ -1,22 +1,17 @@
+<form method="get">
+	Nilai <input type="text" name="input">
+	<button type="submit" > Hitung</button>
+</form>
 <?php
-function angka($x, $y=1){
-	if($y <= $x){
-		angka($x, $y+1);
-		echo "Angka ke :".$y."<br/>";
-	}
-}
-angka(15);
-      
-?>
 
-<?php
-function faktorial($n){
-	if($n==1){
-		return $n;
-	}else{
-		return $n * faktorial($n-1);
+$nilai = isset($_GET["input"]) ? $_GET["input"] : 1;
+function faktorial($n=1) {
+	if ($n==1) {
+		return 1;
+	} else {
+		return $n * faktorial ($n-1);
 	}
 }
-$nilai =10;
-echo "Hasil faktorial ".$nilai."! = ".faktorial($nilai);
+ 
+echo "$nilai! = ".faktorial($nilai);
 ?>

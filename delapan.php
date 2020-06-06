@@ -1,3 +1,7 @@
+<form method="get">
+	Nilai <input type="text" name="input">
+	<button type="submit" > Hitung</button>
+</form>
 <?php
 session_start();
 $input = isset($_GET['input']) ? $_GET['input'] : "";

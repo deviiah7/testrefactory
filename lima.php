@@ -13,27 +13,17 @@
 
 <?php
 if(isset($_POST['submit'])){
-$tahun = $_POST['bil'];
-if ($tahun%4==0)
-{
-    echo "$tahun Tahun Kabisat"; 
-}
-else if($tahun%4!=0)
-{
-    echo "$tahun Bukan Tahun Kabisat"; 
-}
-}
-if(isset($_POST['submit'])){
-    $tahun = $_POST['bil2'];
-    if ($tahun%4==0)
+    $tahun = $_POST['bil'];
+    $tahun2 = $_POST['bil2'];
+    for ($tahun;$tahun<=$tahun2;$tahun++)
     {
-        echo "$tahun Tahun Kabisat"; 
+        if($tahun %4 ==0){
+            echo "$tahun Tahun Kabisat <br>";
+        }else{
+            echo "$tahun Bukan Tahun Kabisat <br>"; 
+        }
     }
-    else if($tahun%4!=0)
-    {
-        echo "$tahun Bukan Tahun Kabisat"; 
-    }
-    }
+}
 ?>
 </body> 
 </html> 
